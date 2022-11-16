@@ -11,7 +11,7 @@ export default function App() {
     Firebase.firestore.collection("Teste")
     .get()
     .then((querySnapshot) => {
-      querySnapshot.forEach((doc) => {
+      querySnapshot.forEach((doc) => { //forEach = for(i, i > doc, i++)
         setDados([doc.data()]);
       })
     })
